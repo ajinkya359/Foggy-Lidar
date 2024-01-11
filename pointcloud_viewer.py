@@ -26,6 +26,8 @@ from typing import List
 from pathlib import Path
 from plyfile import PlyData
 
+
+
 from PyQt5.QtGui import *
 from PyQt5.QtCore import *
 from PyQt5.QtWidgets import *
@@ -58,7 +60,7 @@ LYFT = DATASETS_ROOT / 'LyftLevel5/Perception/train_lidar'
 ARGO = DATASETS_ROOT / 'Argoverse'
 PANDA = DATASETS_ROOT / 'PandaSet'
 DENSE = DATASETS_ROOT / 'DENSE/SeeingThroughFog/lidar_hdl64_strongest'
-KITTI = DATASETS_ROOT / 'KITTI/3D/training/velodyne'
+KITTI = DATASETS_ROOT / 'KITTI/training/velodyne'
 WAYMO = DATASETS_ROOT / 'WaymoOpenDataset/WOD/train/velodyne'
 HONDA = DATASETS_ROOT / 'Honda_3D/scenarios'
 APOLLO = DATASETS_ROOT / 'Apollo3D'
@@ -1877,7 +1879,7 @@ if __name__ == '__main__':
     logging.basicConfig(format='%(message)s', level=logging.INFO)
     logging.debug(pandas.__version__)
 
-    app = QtGui.QApplication([])
+    app = QApplication([])
     window = MyWindow()
     window.show()
     app.exec_()
